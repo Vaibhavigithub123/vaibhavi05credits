@@ -1,0 +1,11 @@
+
+
+Contributers:
+1) Divya Somwanshi (36027)
+2) Vaibhavi Suradkar (36052)
+3) Vedika Thormote (36065)
+
+
+Backend credit:
+
+https://thecodex.me/blog/speech-recognition-with-python-and-flask
