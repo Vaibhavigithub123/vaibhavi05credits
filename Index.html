@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Recognition in Python</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+</head>
+<body>
+<div id="speechContainer">
+    <img src="https://cdn3.vectorstock.com/i/1000x1000/35/37/voice-recognition-concept-microphone-round-button-vector-34473537.jpg" width="150" height="160" align="left==0">
+    <h1>Upload Your File</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file"/>
+        <br>
+        <input type="submit" id="submitButton" value="Transcribe"/>
+    </form>
+
+    {% if transcript != "" %}
+        <div id="speechTranscriptContainer">
+            <h1>Transcript</h1>
+            <p id="speechText">{{ transcript }}</p>
+        </div>
+    {% endif %}
+</div>
+</body>
+<style>
+  body{
+    background-color:#A9E2F3;
+    border:thick solid#000000;
+
+
+}
+    h1, p, input {
+    font-family: 'Lato', sans-serif;
+}
+
+#speechContainer {
+    margin: 20px;
+    padding: 30px 10px;
+    margin-top: 30px;
+}
+
+#submitButton {
+    background-color: #000000;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+}
+
+#submitButton:hover {
+    cursor: pointer;
+}
+
+#speechTranscriptContainer {
+    margin-top: 20px;
+}
+
+#speechText {
+    font-size: 18px;
+    width: 500px;
+}
+</style>
+</html>
